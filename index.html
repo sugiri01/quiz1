@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & ML Quiz</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5f7fa;
+            --text-color: #2c3e50;
+            --correct-color: #27ae60;
+            --hover-color: #357abd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .quiz-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .question-container {
+            background: var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .question-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .options {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .option {
+            padding: 0.8rem 1rem;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .correct-answer {
+            color: var(--correct-color);
+            font-weight: 500;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--secondary-color);
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .question-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI & Machine Learning Quiz</h1>
+            <div class="quiz-intro">
+                Test your knowledge of Artificial Intelligence and Machine Learning fundamentals with these 25 multiple-choice questions.
+            </div>
+        </header>
+
+        <div class="quiz-content">
+            <div class="question-container">
+                <div class="question">1. What is the primary goal of Machine Learning?</div>
+                <div class="options">
+                    <div class="option">a) To create self-aware computers</div>
+                    <div class="option">b) To enable computers to learn from experience without explicit programming</div>
+                    <div class="option">c) To replace human programmers</div>
+                    <div class="option">d) To store large amounts of data</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">2. Which of the following is NOT a type of machine learning?</div>
+                <div class="options">
+                    <div class="option">a) Supervised learning</div>
+                    <div class="option">b) Unsupervised learning</div>
+                    <div class="option">c) Predictive learning</div>
+                    <div class="option">d) Reinforcement learning</div>
+                </div>
+                <div class="correct-answer">Correct Answer: c</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">3. In supervised learning, what is a label?</div>
+                <div class="options">
+                    <div class="option">a) The name of the dataset</div>
+                    <div class="option">b) The target variable or output we want to predict</div>
+                    <div class="option">c) The input features</div>
+                    <div class="option">d) The name of the algorithm</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">4. What is the main purpose of the training dataset?</div>
+                <div class="options">
+                    <div class="option">a) To test the model's performance</div>
+                    <div class="option">b) To store the final results</div>
+                    <div class="option">c) To teach the model patterns and relationships</div>
+                    <div class="option">d) To validate the model's architecture</div>
+                </div>
+                <div class="correct-answer">Correct Answer: c</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">5. Which algorithm is commonly used for classification problems?</div>
+                <div class="options">
+                    <div class="option">a) Linear Regression</div>
+                    <div class="option">b) Random Forest</div>
+                    <div class="option">c) K-means clustering</div>
+                    <div class="option">d) Principal Component Analysis</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">6. What is overfitting?</div>
+                <div class="options">
+                    <div class="option">a) When a model performs too poorly on training data</div>
+                    <div class="option">b) When a model performs well on training data but poorly on new data</div>
+                    <div class="option">c) When a model is too simple</div>
+                    <div class="option">d) When a model trains too quickly</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">7. What is a neural network activation function?</div>
+                <div class="options">
+                    <div class="option">a) A function that starts the training process</div>
+                    <div class="option">b) A function that introduces non-linearity to the network</div>
+                    <div class="option">c) A function that stops the training process</div>
+                    <div class="option">d) A function that loads the data</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">8. What is the purpose of cross-validation?</div>
+                <div class="options">
+                    <div class="option">a) To speed up model training</div>
+                    <div class="option">b) To evaluate model performance on different subsets of data</div>
+                    <div class="option">c) To create new features</div>
+                    <div class="option">d) To clean the dataset</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">9. Which of these is an example of unsupervised learning?</div>
+                <div class="options">
+                    <div class="option">a) Spam detection</div>
+                    <div class="option">b) Customer segmentation</div>
+                    <div class="option">c) Image classification</div>
+                    <div class="option">d) Speech recognition</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">10. What is a hyperparameter?</div>
+                <div class="options">
+                    <div class="option">a) A parameter learned during model training</div>
+                    <div class="option">b) A parameter set before training begins</div>
+                    <div class="option">c) A parameter that changes automatically</div>
+                    <div class="option">d) A parameter used only in deep learning</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">11. What is the purpose of the test dataset?</div>
+                <div class="options">
+                    <div class="option">a) To train the model</div>
+                    <div class="option">b) To evaluate the model's performance on unseen data</div>
+                    <div class="option">c) To tune hyperparameters</div>
+                    <div class="option">d) To create new features</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">12. What is regularization used for?</div>
+                <div class="options">
+                    <div class="option">a) To speed up training</div>
+                    <div class="option">b) To prevent overfitting</div>
+                    <div class="option">c) To create more training data</div>
+                    <div class="option">d) To visualize results</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">13. What is a confusion matrix used for?</div>
+                <div class="options">
+                    <div class="option">a) To measure regression performance</div>
+                    <div class="option">b) To evaluate classification model performance</div>
+                    <div class="option">c) To create new features</div>
+                    <div class="option">d) To normalize data</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">14. Which of these is NOT a common activation function?</div>
+                <div class="options">
+                    <div class="option">a) ReLU</div>
+                    <div class="option">b) Sigmoid</div>
+                    <div class="option">c) Quadratic</div>
+                    <div class="option">d) Tanh</div>
+                </div>
+                <div class="correct-answer">Correct Answer: c</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">15. What is feature scaling?</div>
+                <div class="options">
+                    <div class="option">a) Creating new features</div>
+                    <div class="option">b) Normalizing features to a similar range</div>
+                    <div class="option">c) Removing features</div>
+                    <div class="option">d) Combining features</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">16. What is deep learning?</div>
+                <div class="options">
+                    <div class="option">a) Learning that happens overnight</div>
+                    <div class="option">b) Machine learning using neural networks with many layers</div>
+                    <div class="option">c) Learning from very large datasets</div>
+                    <div class="option">d) Learning without supervision</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">17. What is gradient descent used for?</div>
+                <div class="options">
+                    <div class="option">a) To create new features</div>
+                    <div class="option">b) To optimize model parameters</div>
+                    <div class="option">c) To evaluate model performance</div>
+                    <div class="option">d) To clean data</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">18. What is the purpose of the validation dataset?</div>
+                <div class="options">
+                    <div class="option">a) To train the model</div>
+                    <div class="option">b) To tune hyperparameters</div>
+                    <div class="option">c) To make final model evaluation</div>
+                    <div class="option">d) To create new features</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">19. Which metric is commonly used for regression problems?</div>
+                <div class="options">
+                    <div class="option">a) Accuracy</div>
+                    <div class="option">b) Mean Squared Error</div>
+                    <div class="option">c) F1 Score</div>
+                    <div class="option">d) Precision</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">20. What is transfer learning?</div>
+                <div class="options">
+                    <div class="option">a) Moving data between computers</div>
+                    <div class="option">b) Using a pre-trained model for a new task</div>
+                    <div class="option">c) Transferring knowledge between team members</div>
+                    <div class="option">d) Converting data types</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">21. What is bias in machine learning?</div>
+                <div class="options">
+                    <div class="option">a) Personal preferences in the data</div>
+                    <div class="option">b) The model's tendency to consistently learn certain patterns</div>
+                    <div class="option">c) Political opinions in the algorithm</div>
+                    <div class="option">d) Random errors in prediction</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">22. What is batch size in training?</div>
+                <div class="options">
+                    <div class="option">a) The size of the entire dataset</div>
+                    <div class="option">b) The number of samples processed before model update</div>
+                    <div class="option">c) The size of the test set</div>
+                    <div class="option">d) The number of features</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">23. What is a decision tree?</div>
+                <div class="options">
+                    <div class="option">a) An organizational chart</div>
+                    <div class="option">b) A flowchart-like structure for making predictions</div>
+                    <div class="option">c) A type of neural network</div>
+                    <div class="option">d) A database structure</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">24. What is the purpose of dropout in neural networks?</div>
+                <div class="options">
+                    <div class="option">a) To speed up training</div>
+                    <div class="option">b) To prevent overfitting</div>
+                    <div class="option">c) To increase model complexity</div>
+                    <div class="option">d) To clean data</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+
+            <div class="question-container">
+                <div class="question">25. What is ensemble learning?</div>
+                <div class="options">
+                    <div class="option">a) Learning from music data</div>
+                    <div class="option">b) Combining multiple models to improve performance</div>
+                    <div class="option">c) Training models in parallel</div>
+                    <div class="option">d) Using only the best model</div>
+                </div>
+                <div class="correct-answer">Correct Answer: b</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© EdAthena 2025 AI/ML Quiz. All questions are designed for educational purposes.</p>
+        </footer>
+    </div>
+</body>
+</html>
